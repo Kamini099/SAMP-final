@@ -8,13 +8,20 @@ var mongoose = require("mongoose");
 var session = require("express-session");
 var MongoStore = require("connect-mongo")(session);
 
-mongoose.connect("mongodb://0.0.0.0:27017/sampregistration", (err) => {
-  if (!err) {
-    console.log("MongoDB Connection Succeeded.");
-  } else {
-    console.log("Error in DB connection : " + err);
+mongoose.connect(
+  "mongodb://0.0.0.0:27017/sampregistration",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (!err) {
+      console.log("MongoDB Connection Succeeded.");
+    } else {
+      console.log("Error in DB connection : " + err);
+    }
   }
-});
+);
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -51,14 +58,14 @@ app.get("/views/login", (req, res) => {
   res.render("login");
 });
 
-app.get("/views/index", (req, res) => {
+app.get("/index", (req, res) => {
   res.render("index");
 });
 
-app.get("/views/isamp", (req, res) => {
+app.get("/isamp", (req, res) => {
   res.render("isamp");
 });
-app.get("/views/dsamp", (req, res) => {
+app.get("/dsamp", (req, res) => {
   res.render("dsamp");
 });
 // app.get("/index_Main.html", (req, res) => {
