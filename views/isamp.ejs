@@ -1,36 +1,34 @@
 <style>
-
   .email-link {
-      cursor: pointer; 
-      text-decoration: none; 
-      color: black;
-    }
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
   body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; 
+    padding: 0;
   }
-  
+
   .committee-section {
     text-align: center;
     margin: 100px;
     color: rgb(12, 12, 48);
   }
-  
+
   .divider {
     width: 100%;
     height: 1px;
     background-color: black;
     margin: 10px 0;
   }
-  
+
   .members-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    
   }
-  
+
   .member {
     border: 1px solid #ccc;
     padding: 20px;
@@ -39,46 +37,45 @@
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .member-name {
     font-size: 20px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
   }
-  
+
   .member p {
     margin: 5px 0;
     text-align: left;
   }
-  
+
   .member i {
     margin-right: 10px;
     color: #555;
   }
-  
+
   .member:hover {
     background-color: #e9e9e9;
   }
-  
+
   @media only screen and (max-width: 768px) {
     .members-container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
-  
+
   @media only screen and (max-width: 600px) {
     .members-container {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
   @media only screen and (max-width: 440px) {
-    .committee-section{
+    .committee-section {
       margin: 4px;
       margin-top: 80px;
     }
   }
- 
 </style>
 <%- include("partials/navbar"); -%>
 <div class="committee-section">
@@ -88,19 +85,31 @@
   <div class="members-container">
     <div class="member">
       <p class="member-name">Dr Monica Sikka</p>
-      <p><a href="mailto:sikkam@nitj.ac.in" class="email-link"><i class="fa fa-envelope"></i> sikkam@nitj.ac.in</a></p>
+      <p>
+        <a href="mailto:sikkam@nitj.ac.in" class="email-link"
+          ><i class="fa fa-envelope"></i> sikkam@nitj.ac.in</a
+        >
+      </p>
       <p><i class="fa fa-phone"></i> 9872995546</p>
     </div>
-    
+
     <div class="member">
       <p class="member-name">Dr Samayveer Singh</p>
-      <p><a href="mailto:samays@nitj.ac.in" class="email-link"><i class="fa fa-envelope"></i> samays@nitj.ac.in</a></p>
+      <p>
+        <a href="mailto:samays@nitj.ac.in" class="email-link"
+          ><i class="fa fa-envelope"></i> samays@nitj.ac.in</a
+        >
+      </p>
       <p><i class="fa fa-phone"></i> 9953741966</p>
     </div>
-    
+
     <div class="member">
       <p class="member-name">Dr Nisha Chaurasia</p>
-      <p><a href="mailto:chaurasian@nitj.ac.in" class="email-link"><i class="fa fa-envelope"></i> chaurasian@nitj.ac.in</a></p>
+      <p>
+        <a href="mailto:chaurasian@nitj.ac.in" class="email-link"
+          ><i class="fa fa-envelope"></i> chaurasian@nitj.ac.in</a
+        >
+      </p>
       <p><i class="fa fa-phone"></i> 7000591658</p>
     </div>
   </div>
